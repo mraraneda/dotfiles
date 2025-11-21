@@ -1,0 +1,48 @@
+---
+dotfiles:
+  base_path: "${HOME}/dotfiles/base/apps"
+  remove_on_conflict: false
+  targets:
+    - application: zsh
+      elements:
+        - path: "${HOME}/.zshrc"
+
+    - application: gh
+      elements:
+        - path: "${HOME}/.config/gh"
+
+    - application: iterm2
+      elements:
+        - path: "${HOME}/Library/Application Support/iTerm2"
+
+    - application: nvim
+      elements:
+        - path: "${HOME}/.config/nvim"
+
+    - application: zed
+      elements:
+        - path: "${HOME}/.config/zed/settings.json"
+
+    - application: cargo
+      elements:
+        - path: "${HOME}/.cargo/config.toml"
+
+    - application: vscode
+      elements:
+        - path: "${HOME}/Library/Application Support/Code/User"
+
+    - application: starship
+      elements:
+        - path: "${HOME}/.config/starship.toml"
+
+    - application: openfortivpn
+      elements:
+        - path: "${HOME}/.config/openfortivpn.conf"
+
+    - application: atuin
+      elements:
+        - path: "${HOME}/.config/atuin"
+
+    - application: containers
+      elements:
+        - path: "${HOME}/.config/containers"

@@ -1,0 +1,466 @@
+# Snapshot generado desde `brew list --formula` y `brew list --cask`
+providers:
+  - provider: homebrew
+    command: brew install {name}
+#  - provider: apt
+#    command: sudo apt install -y {name}
+#  - provider: dnf
+#    command: sudo dnf install -y {name}
+
+packages:
+  # Fórmulas (brew install)
+  - name: aom
+    provider: homebrew
+
+  - name: atuin
+    provider: homebrew
+
+  - name: autoconf
+    provider: homebrew
+
+  - name: bat
+    provider: homebrew
+
+  - name: brotli
+    provider: homebrew
+
+  - name: c-ares
+    provider: homebrew
+
+  - name: ca-certificates
+    provider: homebrew
+
+  - name: cairo
+    provider: homebrew
+
+  - name: cmatrix
+    provider: homebrew
+
+  - name: curl
+    provider: homebrew
+
+  - name: dav1d
+    provider: homebrew
+
+  - name: fontconfig
+    provider: homebrew
+
+  - name: freetype
+    provider: homebrew
+
+  - name: fribidi
+    provider: homebrew
+
+  - name: fzf
+    provider: homebrew
+
+  - name: gd
+    provider: homebrew
+
+  - name: gdk-pixbuf
+    provider: homebrew
+
+  - name: gettext
+    provider: homebrew
+
+  - name: gh
+    provider: homebrew
+
+  - name: giflib
+    provider: homebrew
+
+  - name: glib
+    provider: homebrew
+
+  - name: gmp
+    provider: homebrew
+
+  - name: graphite2
+    provider: homebrew
+
+  - name: graphviz
+    provider: homebrew
+
+  - name: gts
+    provider: homebrew
+
+  - name: harfbuzz
+    provider: homebrew
+
+  - name: highway
+    provider: homebrew
+
+  - name: htop
+    provider: homebrew
+
+  - name: icu4c@77
+    provider: homebrew
+
+  - name: imath
+    provider: homebrew
+
+  - name: jasper
+    provider: homebrew
+
+  - name: jpeg-turbo
+    provider: homebrew
+
+  - name: jpeg-xl
+    provider: homebrew
+
+  - name: krb5
+    provider: homebrew
+
+  - name: kubernetes-cli
+    provider: homebrew
+
+  - name: libavif
+    provider: homebrew
+
+  - name: libdeflate
+    provider: homebrew
+
+  - name: libgit2
+    provider: homebrew
+
+  - name: libidn2
+    provider: homebrew
+
+  - name: liblinear
+    provider: homebrew
+
+  - name: libnghttp2
+    provider: homebrew
+
+  - name: libnghttp3
+    provider: homebrew
+
+  - name: libngtcp2
+    provider: homebrew
+
+  - name: libpng
+    provider: homebrew
+
+  - name: libpq
+    provider: homebrew
+
+  - name: librsvg
+    provider: homebrew
+
+  - name: libssh2
+    provider: homebrew
+
+  - name: libtiff
+    provider: homebrew
+
+  - name: libtommath
+    provider: homebrew
+
+  - name: libtool
+    provider: homebrew
+
+  - name: libunistring
+    provider: homebrew
+
+  - name: libuv
+    provider: homebrew
+
+  - name: libvmaf
+    provider: homebrew
+
+  - name: libx11
+    provider: homebrew
+
+  - name: libxau
+    provider: homebrew
+
+  - name: libxcb
+    provider: homebrew
+
+  - name: libxdmcp
+    provider: homebrew
+
+  - name: libxext
+    provider: homebrew
+
+  - name: libxrender
+    provider: homebrew
+
+  - name: libyaml
+    provider: homebrew
+
+  - name: little-cms2
+    provider: homebrew
+
+  - name: lpeg
+    provider: homebrew
+
+  - name: lsd
+    provider: homebrew
+
+  - name: lua
+    provider: homebrew
+
+  - name: luajit
+    provider: homebrew
+
+  - name: luv
+    provider: homebrew
+
+  - name: lz4
+    provider: homebrew
+
+  - name: lzo
+    provider: homebrew
+
+  - name: m4
+    provider: homebrew
+
+  - name: mpdecimal
+    provider: homebrew
+
+  - name: ncurses
+    provider: homebrew
+
+  - name: neovim
+    provider: homebrew
+
+  - name: netpbm
+    provider: homebrew
+
+  - name: nmap
+    provider: homebrew
+
+  - name: node
+    provider: homebrew
+
+  - name: oniguruma
+    provider: homebrew
+
+  - name: openexr
+    provider: homebrew
+
+  - name: openfortivpn
+    provider: homebrew
+
+  - name: openjph
+    provider: homebrew
+
+  - name: openssl@3
+    provider: homebrew
+
+  - name: pango
+    provider: homebrew
+
+  - name: pcre2
+    provider: homebrew
+
+  - name: pipx
+    provider: homebrew
+
+  - name: pixman
+    provider: homebrew
+
+  - name: pkgconf
+    provider: homebrew
+
+  - name: podman
+    provider: homebrew
+
+  - name: podman-compose
+    provider: homebrew
+
+  - name: pyenv
+    provider: homebrew
+
+  - name: python-tk@3.14
+    provider: homebrew
+
+  - name: python@3.14
+    provider: homebrew
+
+  - name: readline
+    provider: homebrew
+
+  - name: ripgrep
+    provider: homebrew
+
+  - name: rtmpdump
+    provider: homebrew
+
+  - name: shellcheck
+    provider: homebrew
+
+  - name: simdjson
+    provider: homebrew
+
+  - name: sqlite
+    provider: homebrew
+
+  - name: starship
+    provider: homebrew
+
+  - name: tcl-tk
+    provider: homebrew
+
+  - name: tree
+    provider: homebrew
+
+  - name: tree-sitter
+    provider: homebrew
+
+  - name: unibilium
+    provider: homebrew
+
+  - name: utf8proc
+    provider: homebrew
+
+  - name: uvwasi
+    provider: homebrew
+
+  - name: vscode-langservers-extracted
+    provider: homebrew
+
+  - name: watch
+    provider: homebrew
+
+  - name: webp
+    provider: homebrew
+
+  - name: wget
+    provider: homebrew
+
+  - name: xorgproto
+    provider: homebrew
+
+  - name: xz
+    provider: homebrew
+
+  - name: zlib
+    provider: homebrew
+
+  - name: zoxide
+    provider: homebrew
+
+  - name: zsh-autocomplete
+    provider: homebrew
+
+  - name: zsh-autosuggestions
+    provider: homebrew
+
+  - name: zstd
+    provider: homebrew
+
+  # Casks (brew install --cask)
+
+  - name: alfred
+    provider: homebrew
+    command: brew install --cask alfred
+
+  - name: appcleaner
+    provider: homebrew
+    command: brew install --cask appcleaner
+
+  - name: bbedit
+    provider: homebrew
+    command: brew install --cask bbedit
+
+  - name: beyond-compare
+    provider: homebrew
+    command: brew install --cask beyond-compare
+
+  - name: codex
+    provider: homebrew
+    command: brew install --cask codex
+
+  - name: drawio
+    provider: homebrew
+    command: brew install --cask drawio
+
+  - name: firefox
+    provider: homebrew
+    command: brew install --cask firefox
+
+  - name: font-atkynson-mono-nerd-font
+    provider: homebrew
+    command: brew install --cask font-atkynson-mono-nerd-font
+
+  - name: font-blex-mono-nerd-font
+    provider: homebrew
+    command: brew install --cask font-blex-mono-nerd-font
+
+  - name: font-caskaydia-cove-nerd-font
+    provider: homebrew
+    command: brew install --cask font-caskaydia-cove-nerd-font
+
+  - name: font-fira-code-nerd-font
+    provider: homebrew
+    command: brew install --cask font-fira-code-nerd-font
+
+  - name: font-fira-sans
+    provider: homebrew
+    command: brew install --cask font-fira-sans
+
+  - name: font-google-sans-code
+    provider: homebrew
+    command: brew install --cask font-google-sans-code
+
+  - name: font-intone-mono-nerd-font
+    provider: homebrew
+    command: brew install --cask font-intone-mono-nerd-font
+
+  - name: font-iosevka-term-nerd-font
+    provider: homebrew
+    command: brew install --cask font-iosevka-term-nerd-font
+
+  - name: font-iosevka-term-slab-nerd-font
+    provider: homebrew
+    command: brew install --cask font-iosevka-term-slab-nerd-font
+
+  - name: font-jetbrains-mono-nerd-font
+    provider: homebrew
+    command: brew install --cask font-jetbrains-mono-nerd-font
+
+  - name: font-victor-mono-nerd-font
+    provider: homebrew
+    command: brew install --cask font-victor-mono-nerd-font
+
+  - name: font-zed-mono-nerd-font
+    provider: homebrew
+    command: brew install --cask font-zed-mono-nerd-font
+
+  - name: gimp
+    provider: homebrew
+    command: brew install --cask gimp
+
+  - name: github
+    provider: homebrew
+    command: brew install --cask github
+
+  - name: google-chrome@beta
+    provider: homebrew
+    command: brew install --cask google-chrome@beta
+
+  - name: iterm2
+    provider: homebrew
+    command: brew install --cask iterm2
+
+  - name: obsidian
+    provider: homebrew
+    command: brew install --cask obsidian
+
+  - name: podman-desktop
+    provider: homebrew
+    command: brew install --cask podman-desktop
+
+  - name: rapidapi
+    provider: homebrew
+    command: brew install --cask rapidapi
+
+  - name: vnc-viewer
+    provider: homebrew
+    command: brew install --cask vnc-viewer
+
+  - name: zed
+    provider: homebrew
+    command: brew install --cask zed

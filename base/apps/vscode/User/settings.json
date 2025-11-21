@@ -1,9 +1,9 @@
 {
     "workbench.colorTheme": "Tokyo Night",
-    "editor.fontFamily": "Google Sans Code NF",
+    "editor.fontFamily": "Google Sans Code NF, AtkynsonMono Nerd Font Propo",
     "editor.fontSize": 15,
     "makefile.configureOnOpen": true,
-    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontSize": 13,
     "explorer.confirmDelete": false,
     "chat.instructionsFilesLocations": {
         ".github/instructions": true,
