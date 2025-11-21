@@ -1,0 +1,18 @@
+#!/bin/sh
+COMAND=$1
+SECOND_PASS=$2
+
+if [ -z "$COMAND" ]; then
+	echo "Command has been connect <c>/status <s>/disconnect <d>"
+elif [[ "s" == $COMAND ]]; then
+	/opt/cisco/anyconnect/bin/vpn status
+elif [[ "d" == $COMAND ]]; then
+	/opt/cisco/anyconnect/bin/vpn disconnect
+elif [[ "c" == $COMAND ]]; then
+	echo "Usename: "
+	read username
+	echo "Password: "
+	read -s password
+
+printf "y\n$username\n$password\n$SECOND_PASS\ny" | /opt/cisco/anyconnect/bin/vpn -s connect clsslvpngw.wal-mart.com
+fi

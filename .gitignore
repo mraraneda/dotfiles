@@ -1,3 +1,11 @@
 stylua.toml
 lazyvim.json
 lazy-lock.json
+
+.DS_Store
+**/vscode/User/History/
+**/vscode/User/workspaceStorage/
+**/vscode/User/globalStorage/
+**/ms-vscode.makefile-tools/targets.log
+**/state.vscdb
+**/state.vscdb.backup

@@ -1,0 +1,56 @@
+#!/bin/sh
+
+# Passwords en duro (se pueden tomar como variables de entorno)
+SUDO_PWD="Ronaele8372@"
+VPN_PWD="Ronaele8382@"
+
+CONFIG_PATH="/Users/marane4/.config/openfortivpn.conf"
+
+echo ""
+echo "INFO:   >>> Starting FortiClient VPN connection script..."
+
+if ! command -v openfortivpn >/dev/null 2>&1; then
+  echo "ERROR:  Command not found, OpenFortiVPN isn't installed. Please install OpenFortiVPN first"
+  exit 1
+fi
+
+echo "INFO:   >>> OpenFortiVPN found and ready to use"
+
+if ! command -v expect >/dev/null 2>&1; then
+  echo "ERROR:  Expect command not found, please install expect. Install with: brew install expect (macOS) or apt install expect (Linux)"
+  exit 1
+fi
+
+echo "INFO:   >>> Expect command available for automation"
+
+if [ -f "$CONFIG_PATH" ]; then
+  echo "INFO:   Configuration file found at: $CONFIG_PATH"
+  echo ""
+
+  expect -c "
+        log_user 1
+
+        spawn sudo openfortivpn -c $CONFIG_PATH
+        puts \" \"
+
+        expect {
+            \"Password:\" {
+                puts \" --> Entering automatically...\"
+                send \"$SUDO_PWD\r\"
+                exp_continue
+            }
+            \"VPN account password:\" {
+                puts \" --> Entering automatically...\"
+                send \"$VPN_PWD\r\"
+                exp_continue
+            }
+        }
+
+        interact
+    "
+else
+  echo "ERROR:  OpenFortiVPN configuration file not found! Expected location: $CONFIG_PATH"
+  echo ""
+  exit 1
+fi
+

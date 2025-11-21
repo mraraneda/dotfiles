@@ -1,0 +1,50 @@
+#!/usr/bin/env osascript
+
+on run argv
+    if (count of argv) = 2 then
+        if ((item 1 of argv as string) is equal to "c") then
+            set cmd to quoted form of "connect"
+            if ((item 2 of argv as string) is equal to "us") then
+                set vpn to quoted form of "US Two Factor VPN"
+            end if
+            if ((item 2 of argv as string) is equal to "uk") then
+                set vpn to quoted form of "US Two Factor VPN"
+            end if
+            if application "Terminal" is running then
+                tell application "Terminal"
+                    if not application "Terminal" is running then launch
+                    activate
+                    set currentTab to do script "/opt/cisco/anyconnect/bin/vpn " & cmd & " " & vpn
+                end tell
+            else
+                tell application "Terminal"
+                    if not application "Terminal" is running then launch
+                    activate
+                    set currentTab to do script "/opt/cisco/anyconnect/bin/vpn " & cmd & " " & vpn in window 1
+                end tell
+            end if
+        end if
+    else if (count of argv) = 1 then
+        if ((item 1 of argv as string) is equal to "d") then
+            set cmd to quoted form of "disconnect"
+        end if
+        if ((item 1 of argv as string) is equal to "s") then
+            set cmd to quoted form of "status"
+        end if
+        if application "Terminal" is running then
+            tell application "Terminal"
+                if not application "Terminal" is running then launch
+                activate
+                set currentTab to do script "/opt/cisco/anyconnect/bin/vpn " & cmd
+            end tell
+        else
+            tell application "Terminal"
+                if not application "Terminal" is running then launch
+                activate
+                set currentTab to do script "/opt/cisco/anyconnect/bin/vpn " & cmd in window 1
+            end tell
+        end if
+    else
+        return "usage: c + { us| uk} || d || s"
+    end if
+end run

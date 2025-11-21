@@ -1,0 +1,128 @@
+#!/bin/sh
+
+# SCP=$(which scp)
+SSH=$(which ssh)
+
+USER="marane4"
+PASS_0="sF0d2yVWgJc="
+PASS_1="3FICIENT3.."
+PASS_2="WMCCL23"
+
+IP_LIST_S2S="${HOME}/.dotfiles/scripts/ipS2S.txt"
+
+conSRV() {
+  IP="$1"
+  USER=$2
+  PASSWORD=$3
+
+  echo "Conn SSH to ${1} with user  ${2} and pass: ${PASSWORD}\n"
+
+  expect -c "
+		set timeout 300
+		spawn $SSH -oConnectTimeout=6 -o StrictHostKeyChecking=no $USER@$IP
+		expect {
+			"?assword:" { send "${PASSWORD}"\r; interact }
+		}
+	"
+}
+
+if [ $# -eq 0 ]; then
+  echo " ================================="
+  echo " Falta parametro o numero de local"
+  echo " ================================="
+  exit 1
+fi
+
+if [ "$1" == "pass" ]; then
+  echo "${PASS_0}"
+  echo "${PASS_1}"
+  echo "${PASS_2}"
+  echo
+  exit 0
+fi
+
+loc=$1
+#len_c=`expr length "$loc"`
+len_c=${#loc}
+
+if [ $len_c -eq 4 ]; then
+  if [ $loc -gt 3000 -a $loc -lt 4000 ]; then
+    LOK=$(grep -q $loc "${IP_LIST_S2S}" | echo $?)
+    if [ $LOK -eq 0 ]; then
+      IPSRV=$(grep $loc "${IP_LIST_S2S}" | cut -f2 -d",")
+      len_c=23
+    fi
+  fi
+fi
+
+case $len_c in
+0)
+  echo " ================================="
+  echo " Falta parametro o numero de local"
+  echo " ================================="
+  exit 1
+  ;;
+1)
+  LOC="00$loc"
+  ;;
+2)
+  LOC="0$loc"
+  ;;
+3)
+  LOC="$loc"
+  ;;
+4)
+  LOC="$loc"
+  ;;
+23)
+  LOC="$loc"
+  ;;
+*)
+  echo " ==========================================="
+  echo " Local ingresado debe ser menor a 999 o 3LLL"
+  echo " ==========================================="
+  exit 2
+  ;;
+esac
+
+case $LOC in
+033)
+  conSRV 10.133.132.70 "$USER" "$PASS_0"
+  ;;
+921)
+  conSRV 10.107.128.7 root L@b921
+  ;;
+872)
+  conSRV 10.10.74.30 root novell
+  ;;
+2467)
+  conSRV 10.10.24.67 root "$PASS_2"
+  ;;
+5508 | 666)
+  conSRV 22.122.225.16 marane4 Walmart.1
+  ;;
+212)
+  conSRV 10.121.122.70 root dys8301
+  ;;
+898 | 5570)
+  conSRV 10.189.182.70 root dys8301
+  ;;
+DP4L | dp4l)
+  conSRV 10.10.55.238 z3admin Lider2010
+  ;;
+
+3039)
+  conSRV 10.10.142.137 root "${PASS_1}"
+  ;;
+059)
+  conSRV 10.105.192.70 root dys8301
+  ;;
+3[0-9][0-9][0-9])
+  conSRV "$IPSRV" "$USER" "$PASS_0"
+  #		$SSH -oConnectTimeout=6 -o StrictHostKeyChecking=no root@"$IPSRV"
+  ;;
+*)
+  IPSRV="10.1"$(echo $LOC | cut -c1-2)".1"$(echo $LOC | cut -c3-3)"2.70"
+  conSRV "$IPSRV" "$USER" "$PASS_0"
+  ;;
+esac

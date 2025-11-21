@@ -1,0 +1,20 @@
+{
+    "workbench.colorTheme": "Tokyo Night",
+    "editor.fontFamily": "Google Sans Code NF",
+    "editor.fontSize": 15,
+    "makefile.configureOnOpen": true,
+    "terminal.integrated.fontSize": 16,
+    "explorer.confirmDelete": false,
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": true,
+        "/var/folders/_f/xcqmzw5960z_6s9mp50v0bwh0000gp/T/postman-collections-post-response.instructions.md": true,
+        "/var/folders/_f/xcqmzw5960z_6s9mp50v0bwh0000gp/T/postman-collections-pre-request.instructions.md": true,
+        "/var/folders/_f/xcqmzw5960z_6s9mp50v0bwh0000gp/T/postman-folder-post-response.instructions.md": true,
+        "/var/folders/_f/xcqmzw5960z_6s9mp50v0bwh0000gp/T/postman-folder-pre-request.instructions.md": true,
+        "/var/folders/_f/xcqmzw5960z_6s9mp50v0bwh0000gp/T/postman-http-request-post-response.instructions.md": true,
+        "/var/folders/_f/xcqmzw5960z_6s9mp50v0bwh0000gp/T/postman-http-request-pre-request.instructions.md": true
+    },
+    "python-envs.pythonProjects": [],
+    "editor.fontLigatures": false,
+    "editor.lineHeight": 27
+}

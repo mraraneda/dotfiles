@@ -1,0 +1,60 @@
+---
+app_config: ## Por ahora no se usa en la APP mrdot
+    ## /Users/marane4/dotfiles/base
+    base_path: /Users/marane4/dotfiles/base/apps
+
+
+dotfiles:
+    base_path: /Users/marane4/dotfiles/base/apps
+
+    ## indicates what to do in case of collision
+    ##  if true -> remove elements
+    ##  if false -> skip (with logger warning)
+    remove_on_conflict: false
+
+    ## Set of applications with their "dotfiles" configurations
+    targets:
+        -   application: zsh
+            elements:
+                -   path: /Users/marane4/.zimrc
+                -   path: /Users/marane4/.zshrc
+
+        -   application: gh
+            elements:
+                -   path: /Users/marane4/.config/gh
+
+        -   application: iterm2
+            elements:
+                -   path: /Users/marane4/Library/Application Support/iTerm2
+
+        -   application: nvim
+            elements:
+                -   path: /Users/marane4/.config/nvim
+
+        -   application: zed
+            elements:
+                -   path: /Users/marane4/.config/zed/settings.json
+
+        -   application: cargo
+            elements:
+                -   path: /Users/marane4/.cargo/config.toml
+
+        -   application: vscode
+            elements:
+                -   path: /Users/marane4/Library/Application Support/Code/User
+
+        -   application: starship
+            elements:
+                -   path: /Users/marane4/.config/starship.toml
+        
+        -   application: openfortivpn
+            elements:
+                -   path: /Users/marane4/.config/openfortivpn.conf
+
+        -   application: atuin
+            elements:
+                -   path: /Users/marane4/.config/atuin
+
+        -   application: containers
+            elements:
+                -   path: /Users/marane4/.config/containers

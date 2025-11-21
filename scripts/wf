@@ -1,0 +1,27 @@
+#!/bin/sh
+
+option="${1}"
+case ${option} in
+   1) echo "Connecting to \"SSWIFI\"..."
+      networksetup -setairportnetwork en0 SSWIFI 'Nsb@q#yK:U$q89d@2n'
+      ;;
+   2) echo "Connecting to \"WMeComm\"..."
+      networksetup -setairportnetwork en0 WMeComm 'jVLs#vm9h;5w5U9o'
+      ;;
+   3) echo "Connecting to \"eCommerce\"..."
+      networksetup -setairportnetwork en0 eCommerce 'WM.ecommerce.2018'
+      ;;
+   4) echo "Connecting to \"ClqfElt"\"
+      networksetup -setairportnetwork en0 ClqfElt 'Vwabci5f4MrwXm12B2wx'
+      ;;
+   5) echo "Connecting to \"Capacitacion"\"
+      networksetup -setairportnetwork en0 Capacitacion 'WALMART2018'
+      ;;
+   6) echo "Conecting to \"Condor"\"
+      networksetup -setairportnetwork en0 Condor '3NFR1@150706aC'
+      ;;
+   *)
+      echo "$(basename ${0}) usage: \"[1] SSWIFI | [2] WMeComm | [3] eCommerce | [4] ClqfElt (tiendas) | [5] Capacitacion | [6] Condor\""
+      exit 1 # Command to come out of the program with status 1
+      ;;
+esac
