@@ -14,3 +14,6 @@ source "${DOTFILES_BASE_PATH}/shell/functions.sh"
 
 # 4) Prompt (Starship)
 eval "$(starship init zsh)"
+
+# Added by Antigravity
+export PATH="/Users/marane4/.antigravity/antigravity/bin:$PATH"

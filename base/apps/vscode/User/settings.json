@@ -1,7 +1,7 @@
 {
-    "workbench.colorTheme": "Tokyo Night",
-    "editor.fontFamily": "Google Sans Code NF, AtkynsonMono Nerd Font Propo",
-    "editor.fontSize": 15,
+    "workbench.colorTheme": "Bearded Theme feat. Melle Julie Light",
+    "editor.fontFamily": "IntoneMono Nerd Font Propo",
+    "editor.fontSize": 16,
     "makefile.configureOnOpen": true,
     "terminal.integrated.fontSize": 13,
     "explorer.confirmDelete": false,

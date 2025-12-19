@@ -464,3 +464,15 @@ packages:
   - name: zed
     provider: homebrew
     command: brew install --cask zed
+
+  - name: ghostty
+    provider: homebrew
+    command: brew install --cask ghostty
+
+  - name: httpie 
+    provider: homebrew
+    command: brew install --cask httpie
+
+  - name: httpie-desktop 
+    provider: homebrew
+    command: brew install --cask httpie-desktop

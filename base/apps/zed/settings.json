@@ -1,17 +1,46 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
-  "theme": {
-    "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Frappé"
+  "disable_ai": true,
+  "icon_theme": "Material Icon Theme",
+  "theme": "Colorizer Pro",
+  // The name of a font to use for rendering text in the editor
+  // ".ZedMono" currently aliases to Lilex
+  // but this may change in the future.
+  "buffer_font_family": ".ZedMono",
+  // Set the buffer text's font fallbacks, this will be merged with
+  // the platform's default fallbacks.
+  "buffer_font_fallbacks": null,
+  // The OpenType features to enable for text in the editor.
+  "buffer_font_features": {
+    // Disable ligatures:
+    // "calt": false
+  },
+  // The default font size for text in the editor
+  "buffer_font_size": 14.0,
+  // The weight of the editor font in standard CSS units from 100 to 900.
+  "buffer_font_weight": 400.0,
+  // Set the buffer's line height.
+  // May take 3 values:
+  //  1. Use a line height that's comfortable for reading (1.618)
+  //         "buffer_line_height": "comfortable"
+  //  2. Use a standard line height, (1.3)
+  //         "buffer_line_height": "standard",
+  //  3. Use a custom line height
+  //         "buffer_line_height": {
+  //           "custom": 2
+  //         },
+  "buffer_line_height": "comfortable",
+  // The name of a font to use for rendering text in the UI
+  // You can set this to ".SystemUIFont" to use the system font
+  // ".ZedSans" currently aliases to "IBM Plex Sans", but this may
+  // change in the future
+
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy" // rust-analyzer.check.command (default: "check")
+        }
+      }
+    }
   }
 }

@@ -28,8 +28,8 @@ export GOBIN="$GOPATH/bin"
 # ------------------------------------------------------------------------------
 # Apps / API keys (ojo: esto es sensible)
 # ------------------------------------------------------------------------------
-# Mantén aquí tu API key real; lo enmascaro en este ejemplo.
-export OPENAI_API_KEY='TU_OPENAI_API_KEY_AQUI'
+# Mantén aquí tu API key real; lo enmascaro en este ejemplo: # export OPENAI_API_KEY=''
+
 
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
